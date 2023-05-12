@@ -1,1 +1,11 @@
 go 1.19
+
+use (
+	./go_code/epoll
+	./go_code/goCache
+	./go_code/algorithm/day02
+	./go_code/gin
+	./go_code/Pool/pool
+	./go_code/gRPC/day02
+	./go_code/gRPC/day03
+)
