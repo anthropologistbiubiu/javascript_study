@@ -8,4 +8,5 @@ use (
 	./go_code/Pool/pool
 	./go_code/gRPC/day02
 	./go_code/gRPC/day03
+	./go_code/kratos
 )
