@@ -9,4 +9,7 @@ use (
 	./go_code/gRPC/day02
 	./go_code/gRPC/day03
 	./go_code/kratos
+	./go_code/etcd
+	./go_code/mongodb
+	go_code
 )
