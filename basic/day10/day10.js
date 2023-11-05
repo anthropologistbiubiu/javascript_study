@@ -16,7 +16,8 @@ console.log('negInfiniteNum',negInfiniteNum)
 
 
 var number1 = Number.parseFloat('123456.1111')
-var number2 = Number.parseInt('123456.222')
+var number2 = Number.parseInt('123456')
+var number3 =('123456')
 console.log('number1',number1)
 console.log('number2',number2)
 
