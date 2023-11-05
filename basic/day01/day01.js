@@ -51,3 +51,30 @@ outpoint:for(var i = 0;i<10;i++){
     }
 }
 console.log('number2',number2)
+
+
+// 6.continue
+for (var i = 1;i<10;i++){
+    if (i == 1 ){
+        continue
+    }
+    console.log('i',i)
+}
+
+// 7. label continue
+
+
+
+// 8. for in
+
+var arr = [1,2,3,4,5]
+
+for (var i in arr) {
+    console.log(i);
+}
+
+// 9. for of
+for (var j of arr) {
+   console.log(j)
+}
+
