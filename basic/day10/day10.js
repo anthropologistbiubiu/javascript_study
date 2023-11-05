@@ -1,12 +1,12 @@
 // 数字与日期
-import moment from "./node_modules/moment";
+//import moment from "./node_modules/moment";
 const moment = require('moment');
+
 const biggestNum = Number.MAX_VALUE
 console.log('biggestNum',biggestNum)
 
 const smallestNum = Number.MIN_VALUE
 console.log('smallestNum',smallestNum)
-
 
 const infiniteNum = Number.POSITIVE_INFINITY
 const  notNum = Number.NaN
