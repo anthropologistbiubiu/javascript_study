@@ -97,3 +97,23 @@ const a2 = a1.map((item) =>{
    return transferItem
 });
 console.log(a2);
+
+// 12. fileter
+
+const a3 = ['a','b','c',10,20,30];
+const a4 = a3.filter((item)=>{
+   if (typeof item === 'number'){
+      return true;
+   }
+   return false;
+});
+console.log(a4);
+
+// find
+
+const j = a3.find((item)=>{
+   if (typeof item == 'number') {
+      return true
+   };
+});
+console.log(j)
