@@ -117,3 +117,15 @@ const j = a3.find((item)=>{
    };
 });
 console.log(j)
+
+
+// 二维数组
+
+var dp = new Array(3)
+for (let i  =0;i<3;i++){
+   dp[i] = new Array(3)
+   for (let j = 0;j<3;j++){
+     dp[i][j] = i+j;
+   }
+}
+console.log(dp)
