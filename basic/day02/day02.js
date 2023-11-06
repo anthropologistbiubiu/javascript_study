@@ -60,3 +60,40 @@ console.log(arr8,item)
 //6.unshift
 arr8.unshift('sun','da','sheng')
 console.log(arr8)
+
+
+// 6.slice
+
+arr9 = arr8.slice(0,1)
+console.log(arr9)
+//7.at
+item = arr9.at(0)
+console.log(item)
+
+// 8.reverse
+
+arr8.reverse()
+console.log(arr8)
+
+// 9.sort
+
+arr8.sort()
+console.log(arr8)
+
+// 10 forEach
+
+const a = ['a','b','c']
+
+a.forEach((elem)=>{
+   console.log('jiaruaiyoutianyi',elem)
+})
+
+
+// 11 map
+
+const a1 = ["a","b","c"];
+const a2 = a1.map((item) =>{
+   transferItem = item.toUpperCase()
+   return transferItem
+});
+console.log(a2);
