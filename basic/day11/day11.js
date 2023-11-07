@@ -31,3 +31,10 @@ console.log(mySet.has('4'))
 for (let i of mySet) {
     console.log(i)
 };
+
+
+// object和map 的比较
+
+
+
+
