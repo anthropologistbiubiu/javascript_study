@@ -12,16 +12,36 @@
 
 class Myclass {
 
-    constructor();  // 构造函数
-    myField = "mycalss";
+    constructor() {} // 构造函数
+     myField = "mycalss"
+     mymethod = function (){
+        console.log('hello world');
+     }
+
     static myStaticMethod(){
 
-    };
+    }
+    static {
 
-};
+    }
+}
+
+
+var a = new Myclass()
+console.log(a.myField)
+
+a.myField = 'cat';
+console.log(a.myField)
+console.log(a.mymethod())
 
 // 在类体内有若干特性可以用
 
 
+class Color {
+    constructor(r,g,b) {
+        this.value = [r,g,b]
+    }
+}
 
-
+const red = new Color(255,0,0)
+console.log(red.value)
