@@ -32,7 +32,7 @@ console.log(a.myField)
 
 a.myField = 'cat';
 console.log(a.myField)
-console.log(a.mymethod())
+a.mymethod()
 
 // 在类体内有若干特性可以用
 
@@ -44,6 +44,7 @@ class Color {
 }
 
 const red = new Color(255,0,0)
+red.value = [0,0,-5]
 console.log(red.value)
 
 class myColor{
@@ -75,7 +76,10 @@ class privateColor{
         return this.#values[0]
     }
     setRed(red){
-       this.#values[0]
+        if (red <0|| red >255){
+            throw new RangeError("无效的r值")
+        }
+       this.#values[0] = red
     }
 }
 
@@ -84,7 +88,7 @@ var a1 = new privateColor(1,2,3)
 console.log(a1.getRed())
 a1.setRed(10)
 console.log(a1.getRed())
-
+a1.getRed()
 
 
 
