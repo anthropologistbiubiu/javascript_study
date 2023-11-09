@@ -45,3 +45,49 @@ class Color {
 
 const red = new Color(255,0,0)
 console.log(red.value)
+
+class myColor{
+   constructor(...values){
+       this.value = values
+   }
+   getRed(){
+       return this.value[0]
+   }
+   setRed(red){
+       this.value[0] = red
+   }
+}
+
+const blue = new myColor(0,255,0)
+console.log(blue.value)
+blue.setRed(254)
+console.log(blue.getRed())
+
+
+// 封装
+
+class privateColor{
+    #values
+    constructor(r,g,b) {
+        this.#values =[r,g,b]
+    };
+    getRed(){
+        return this.#values[0]
+    }
+    setRed(red){
+       this.#values[0]
+    }
+}
+
+
+var a1 = new privateColor(1,2,3)
+console.log(a1.getRed())
+a1.setRed(10)
+console.log(a1.getRed())
+
+
+
+
+
+
+
