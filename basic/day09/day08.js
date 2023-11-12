@@ -62,19 +62,31 @@ fetchData()
 // promise 链式调用
 
 function step1() {
-    return new Promise((resolve) => {
+    return new Promise((resolve,reject) => {
         setTimeout(() => {
-            console.log("步骤1完成");
-            resolve("结果1");
+            const success =false
+            if (success) {
+                console.log("步骤1完成");
+                resolve("结果1");
+            } else {
+                console.log("步骤1执行失败");
+                reject("结果1执行失败");
+            }
         }, 1000);
     });
 }
 
 function step2(result) {
-    return new Promise((resolve) => {
+    return new Promise((resolve,reject) => {
         setTimeout(() => {
-            console.log("步骤2完成");
-            resolve(result + " 结果2");
+            const success = true
+            if (success) {
+                console.log("步骤2完成");
+                resolve(result + " 结果2");
+
+            } else {
+                reject(result+'step2执行失败')
+            }
         }, 1000);
     });
 }
