@@ -58,3 +58,33 @@ fetchData()
     .catch((error) => {
         console.error("失败：" + error);
     });
+
+// promise 链式调用
+
+function step1() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("步骤1完成");
+            resolve("结果1");
+        }, 1000);
+    });
+}
+
+function step2(result) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("步骤2完成");
+            resolve(result + " 结果2");
+        }, 1000);
+    });
+}
+
+// 链式调用
+step1()
+    .then((result1) => step2(result1))
+    .then((finalResult) => {
+        console.log("最终结果：" + finalResult);
+    })
+    .catch((error) => {
+        console.error("发生错误：" + error);
+    });
