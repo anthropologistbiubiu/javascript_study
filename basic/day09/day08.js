@@ -33,3 +33,28 @@ myPromise.then((result)=>{
 }).catch((error)=>{
     console.log('失败: '+error)
 })
+
+// 模拟异步操作
+
+function fetchData() {
+    return new Promise((resolve, reject) => {
+        // 模拟异步操作，例如网络请求
+        setTimeout(() => {
+            const success = true;
+            if (success) {
+                resolve("成功的数据");
+            } else {
+                reject("失败的原因");
+            }
+        }, 2000);
+    });
+}
+
+// 调用fetchData并处理结果
+fetchData()
+    .then((data) => {
+        console.log("成功：" + data);
+    })
+    .catch((error) => {
+        console.error("失败：" + error);
+    });
