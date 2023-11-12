@@ -27,3 +27,9 @@ const myPromise = new Promise((resolve, reject) => {
         reject("失败的原因");
     }
 });
+
+myPromise.then((result)=>{
+    console.log('成功: '+result);
+}).catch((error)=>{
+    console.log('失败: '+error)
+})
