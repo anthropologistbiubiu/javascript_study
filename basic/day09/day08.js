@@ -1,1 +1,10 @@
-// 正则表达式
+// promise
+
+
+function successCallBack(){
+    console.log("successCallBack");
+}
+
+function failCallBack(){
+   console.log('failCallBack');
+}
