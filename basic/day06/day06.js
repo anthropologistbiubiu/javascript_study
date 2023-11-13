@@ -19,15 +19,15 @@ loadJson('https://javascript.info/no-such-user.json')
         .catch(); // Error: 404
 */
 async function LoadJson(url){
-   let response = await (url);
+   let response = await fetch(url);
    if (response.status == 200) {
-       return response.json();
+       let json = await response.json()
+       return json
    }
-  return new Error(response.status)
+  throw new Error(response.status)
 }
 
-console.log(LoadJson("www.baidu.com"))
-
+LoadJson('https://javascript.info/no-such-user.json').catch()
 // 异常处理
 // 11月13号开始完成异常处理的过程。
 
