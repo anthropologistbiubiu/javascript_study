@@ -1,1 +1,3 @@
-// async await的用法
+
+// js 正则表达式
+var re = new RegExp("ab+c");
