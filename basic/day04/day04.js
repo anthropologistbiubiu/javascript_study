@@ -14,3 +14,10 @@ const mycar = {
 
 myFunction(mycar);
 console.log(mycar.make)
+
+
+const square = function(number){
+    return number*number;
+};
+
+console.log(square(4));
