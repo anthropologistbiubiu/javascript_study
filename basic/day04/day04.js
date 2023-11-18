@@ -81,9 +81,27 @@ function outside(x){
     function inside(y){
        return x+y;
     };
-   return inside(y)
+   return inside
 };
 
+
+const fnInside = outside(3)
+console.log(fnInside(5));
+console.log(outside(10)(15))
+
+
+// 多层嵌套
+function A(a){
+   function B(b){
+        function C(c){
+            console.log(a+b+c);
+        };
+        C(3);
+   };
+   B(2);
+};
+
+A(1);
 
 
 
