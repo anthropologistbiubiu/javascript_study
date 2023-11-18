@@ -44,6 +44,19 @@ let f;
 
 if (num==1){
     f = function (theObject){
-
+        theObject.make = 'Beijing';
     };
 };
+
+
+// 递归函数  斐波那契数列
+
+function factorial(n){
+    if (n==1 || n==0){
+        return 1
+    } else {
+        return factorial(n-1) * n
+    }
+}
+
+
