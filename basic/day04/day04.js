@@ -116,7 +116,19 @@ function out(){
 console.log('######',out()(2));
 
 // 使用 arguments 对象
+// 函数的实际参数会保存在arguments 对象中;
 
+
+function myContract(separator){
+    let result = '';
+    for(var i = 1;i < separator.length;i++){
+        result += arguments[i] + arguments[0]
+    };
+    return result;
+};
+
+
+console.log(myContract((";","sun","wei","ming")));
 
 
 
