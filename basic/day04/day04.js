@@ -103,6 +103,24 @@ function A(a){
 
 A(1);
 
+// 命名冲突
+function out(){
+
+    const x = 5;
+    function inside(x){
+      return x*2;
+    };
+    return inside
+};
+
+console.log('######',out()(2));
+
+// 使用 arguments 对象
+
+
+
+
+
 
 
 
