@@ -41,7 +41,7 @@ console.log(numRes)
 // 在javascript 当中可以根据
 
 let f;
-
+const num  =1;
 if (num==1){
     f = function (theObject){
         theObject.make = 'Beijing';
@@ -53,10 +53,24 @@ if (num==1){
 
 function factorial(n){
     if (n==1 || n==0){
-        return 1
+        return n
     } else {
-        return factorial(n-1) * n
+        return factorial(n-1) +factorial(n-2);
     }
 }
 
+
+console.log(factorial(3))
+
+// 函数的作用域  嵌套函数
+
+function addSquare(a,b){
+
+    function square(x){
+       return x*x;
+    };
+    return square(a) +square(b);
+};
+
+console.log(addSquare(1,3));
 
