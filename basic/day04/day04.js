@@ -37,3 +37,13 @@ const numbers = [1,2,3,4,5];
 const numRes = map(cube,numbers)
 console.log(numRes)
 
+
+// 在javascript 当中可以根据
+
+let f;
+
+if (num==1){
+    f = function (theObject){
+
+    };
+};
