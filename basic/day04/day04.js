@@ -134,10 +134,22 @@ console.log(myContract("、", "红", "橙", "蓝"));
 
 
 // 默认参数和剩余参数
-
 function multiply(a,b){
-
+    b = typeof b !=="undefined" ?b:1;
+    return a*b;
 };
+console.log(multiply(5))
+
+// 剩余参数
+
+
+
+
+// 箭头函数
+
+
+
+
 
 
 
