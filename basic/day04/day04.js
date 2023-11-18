@@ -74,3 +74,19 @@ function addSquare(a,b){
 
 console.log(addSquare(1,3));
 
+
+//闭包
+
+function outside(x){
+    function inside(y){
+       return x+y;
+    };
+   return inside(y)
+};
+
+
+
+
+
+
+
