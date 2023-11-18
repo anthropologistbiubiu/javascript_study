@@ -122,17 +122,22 @@ console.log('######',out()(2));
 function myContract(separator){
     let result = '';
     for(var i = 1;i < separator.length;i++){
-        result += arguments[i] + arguments[0]
+        result  += arguments[i] + arguments[0];
     };
     return result;
 };
 
-
-console.log(myContract((";","sun","wei","ming")));
-
+console.log(myContract("、", "红", "橙", "蓝"));
 
 
 
+
+
+// 默认参数和剩余参数
+
+function multiply(a,b){
+
+};
 
 
 
