@@ -13,19 +13,19 @@ class LinkedList{
    }
 
     append(data){
-        node = new (Node(data))
+        const node = new Node(data)
         if (this.head == null) {
             this.head = node
-            tihs.length++
+            this.length++
             return
         } else {
-            head = this.head
+            let head = this.head
             while (head.next != null) {
                 head = head.next
             }
             head.next = node
         }
-        tihs.length++
+        this.length++
     }
     remove(){
 
@@ -37,18 +37,21 @@ class LinkedList{
 
     }
     print() {
-        for ( i = 0;i < this.length;i++) {
-            console.log(this.head.data)
+        let head = this.head
+        for ( let i = 0;i < this.length;i++) {
+            console.log(head.data)
+            head = head.next
+
         }
     }
 }
 
 
-list1 = new(LinkedList())
-list.append(1)
-list.append(2)
-list.append(3)
-list.print()
+list1 = new LinkedList()
+list1.append(1)
+list1.append(2)
+list1.append(3)
+list1.print()
 
 
 
