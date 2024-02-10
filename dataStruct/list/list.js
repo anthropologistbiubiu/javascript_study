@@ -12,7 +12,17 @@ class LinkedList{
        this.length = 0
    }
 
-    append(){
+    append(data){
+        node = new (Node(data))
+       if (this.head == null) {
+           this.head = node
+           return
+       } else {
+            //  while
+
+       }
+
+       tihs.length++
 
     }
     remove(){
@@ -22,6 +32,9 @@ class LinkedList{
 
     }
     find(){
+
+    }
+    print() {
 
     }
 }
