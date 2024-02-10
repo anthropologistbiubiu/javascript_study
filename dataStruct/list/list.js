@@ -27,8 +27,25 @@ class LinkedList{
         }
         this.length++
     }
-    remove(){
-
+    remove(data){
+        if (this.head == null) {
+            return
+        }
+        let pre = null
+        let cur = this.head
+        if (cur.data == data) {
+            this.head = this.head.next
+            this.length--
+            return
+        }
+        while (cur != null && cur.data != data) {
+            pre = cur
+            cur = cur.next
+        }
+        if (cur) {
+           pre.next = cur.next
+        }
+        this.length--
     }
     update(){
 
@@ -37,10 +54,10 @@ class LinkedList{
 
     }
     print() {
-        let head = this.head
+        let cur = this.head
         for ( let i = 0;i < this.length;i++) {
-            console.log(head.data)
-            head = head.next
+            console.log(cur.data)
+            cur = cur.next
 
         }
     }
@@ -51,6 +68,9 @@ list1 = new LinkedList()
 list1.append(1)
 list1.append(2)
 list1.append(3)
+list1.print()
+list1.remove(3)
+console.log("-----------")
 list1.print()
 
 
