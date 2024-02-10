@@ -47,11 +47,15 @@ class LinkedList{
         }
         this.length--
     }
-    update(){
-
-    }
-    find(){
-
+    find(data){
+        let cur = this.head
+        while (cur != null && cur.data != data) {
+            cur = cur.next
+        }
+        if (cur) {
+            return true
+        }
+        return false
     }
     print() {
         let cur = this.head
@@ -72,6 +76,7 @@ list1.print()
 list1.remove(3)
 console.log("-----------")
 list1.print()
+console.log(list1.find(1))
 
 
 
