@@ -53,15 +53,14 @@ class LinkedList{
             cur = cur.next
         }
         if (cur) {
-            return true
+            return cur
         }
-        return false
+        return null
     }
     update(old_data,new_data){
-        cur = this.head
-        flag = this.find(old_data)
-        if (flag) {
-
+        let pr = this.find(old_data)
+        if (pr != null) {
+            pr.data = new_data
         }
     }
     print() {
@@ -79,11 +78,16 @@ list1 = new LinkedList()
 list1.append(1)
 list1.append(2)
 list1.append(3)
-list1.print()
-list1.remove(3)
 console.log("-----------")
 list1.print()
-console.log(list1.find(4))
+list1.remove(3)
+console.log("after remove")
+list1.print()
+console.log('--------')
+console.log(list1.find(1))
+list1.update(11,10)
+console.log('------------update')
+list1.print()
 
 
 
