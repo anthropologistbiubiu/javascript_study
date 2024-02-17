@@ -58,14 +58,11 @@ class LinkedList{
         return false
     }
     update(old_data,new_data){
-        let cur = this.head
-        while (cur != null && cur.data != data) {
-            cur = cur.next
+        cur = this.head
+        flag = this.find(old_data)
+        if (flag) {
+
         }
-        if (cur) {
-            return true
-        }
-        return false
     }
     print() {
         let cur = this.head
