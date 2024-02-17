@@ -76,7 +76,7 @@ list1.print()
 list1.remove(3)
 console.log("-----------")
 list1.print()
-console.log(list1.find(1))
+console.log(list1.find(4))
 
 
 
