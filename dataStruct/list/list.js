@@ -57,6 +57,16 @@ class LinkedList{
         }
         return false
     }
+    update(old_data,new_data){
+        let cur = this.head
+        while (cur != null && cur.data != data) {
+            cur = cur.next
+        }
+        if (cur) {
+            return true
+        }
+        return false
+    }
     print() {
         let cur = this.head
         for ( let i = 0;i < this.length;i++) {
