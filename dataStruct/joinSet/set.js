@@ -1,7 +1,3 @@
-
-
-
-
 class DisJoinSet{
     constructor(size) {
         this.parent = new Array(size)
@@ -12,9 +8,15 @@ class DisJoinSet{
     }
 
     find(x){
-
+        if (this.parent[x] !== x) {
+            this.parent[x] = this.find(this.parent[x])
+        }
+        return this.parent[x]
     }
     union(x,y) {
+        xRoot = this.find(x)
+        yRoot = this.find(y)
+
 
     }
 
