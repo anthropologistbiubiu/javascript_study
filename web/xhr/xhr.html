@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequest Example</title>
+</head>
+<body>
+<button onclick="sendRequest()">Send Request</button>
+
+<script>
+    function sendRequest() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == XMLHttpRequest.DONE) {
+                if (xhr.status == 200) {
+                    console.log("Response:", xhr.responseText);
+                } else {
+                    console.error("Request failed with status:", xhr.status,xhr.response);
+                }
+            }
+        };
+        xhr.open("GET", "http://localhost:9090/fetch1", true);
+        xhr.send();
+    }
+</script>
+</body>
+</html>
