@@ -1,7 +1,5 @@
 
-
 let total = 0
-
 
 function Increase(){
     total += 1
