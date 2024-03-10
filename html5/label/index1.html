@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        .container{
+            background: red;
+        }
+        .container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+}
+       .box{
+           width: 100px;
+           height:100px;
+           background:aqua;
+           margin: 5px;
+           float:left;
+           <!--
+            浮动会造成父级元素的塌陷
+            后续元素也会受到影响
+
+           清除浮动：
+           1.父元素设置高度
+           2.设置clear 属性
+           3.父元素设置overflow clear 属性
+           4.设置伪对象属性
+           -->
+
+       }
+       .text{
+           width: 100px;
+           height: 100px;
+           background: blue;
+           <!--设置clear属性 -->
+       }
+
+    </style>
+
+</head>
+<body>
+    <!--
+    清除浮动
+    -->
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="text"></div>
+    </div>
+    <div class="text"></div>
+
+
+
+</body>
+</html>
