@@ -21,11 +21,11 @@ function mergeSort(arr){
         result.push(right[r]);
       };
    }
-   if (l < left.length) {
-     result.push(left[l]);
+   if (l < left.length-1) {
+     result.push(left.slice(l,left.length));
    }
-   if (r < right.length){
-      result.push(right[r]);
+   if (r < right.length-1){
+      result.push(right.slice(r,right.length));
    }
    return result;
 };
@@ -34,7 +34,8 @@ function mergeSort(arr){
 
 function main(){
    arr = [9, 2, 1, 10, 22, 14, 7, 89, 15, 0];
-   console.log(mergeSort(arr));
+   //console.log(mergeSort(arr));
+   console.log(arr.slice(0,arr.length))
 };
 
 
