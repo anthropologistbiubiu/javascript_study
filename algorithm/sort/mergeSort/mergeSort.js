@@ -22,22 +22,20 @@ function mergeSort(arr){
       };
    }
    if (l < left.length) {
-
+     result.push(left[l]);
    }
    if (r < right.length){
-
+      result.push(right[r]);
    }
    return result;
 };
 
 
 
-function merge(left,right){
-
-  return left.concat(right);
+function main(){
+   arr = [9, 2, 1, 10, 22, 14, 7, 89, 15, 0];
+   console.log(mergeSort(arr));
 };
 
 
-function main() {
-  return arr;
-};
+main();
