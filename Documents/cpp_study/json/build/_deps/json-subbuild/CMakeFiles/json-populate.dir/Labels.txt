@@ -1,0 +1,14 @@
+# Target labels
+ json-populate
+# Source files and their labels
+/Users/biubiu/Documents/cpp_study/json/build/_deps/json-subbuild/CMakeFiles/json-populate
+/Users/biubiu/Documents/cpp_study/json/build/_deps/json-subbuild/CMakeFiles/json-populate.rule
+/Users/biubiu/Documents/cpp_study/json/build/_deps/json-subbuild/CMakeFiles/json-populate-complete.rule
+/Users/biubiu/Documents/cpp_study/json/build/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-build.rule
+/Users/biubiu/Documents/cpp_study/json/build/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-configure.rule
+/Users/biubiu/Documents/cpp_study/json/build/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-download.rule
+/Users/biubiu/Documents/cpp_study/json/build/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-install.rule
+/Users/biubiu/Documents/cpp_study/json/build/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-mkdir.rule
+/Users/biubiu/Documents/cpp_study/json/build/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-patch.rule
+/Users/biubiu/Documents/cpp_study/json/build/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-test.rule
+/Users/biubiu/Documents/cpp_study/json/build/_deps/json-subbuild/json-populate-prefix/src/json-populate-stamp/json-populate-update.rule
