@@ -12,12 +12,11 @@ var convert = function(s, numRows) {
     if (numRows == 1 || numRows > s.length){
         return s
     }
-    let rows = new Array(numRows)
+    let rows = new Array(numRows).fill("")
     let currentRow = 0
     let goingDown = false
-
     for (let char of s) {
-        rows[currentRow] += char
+        rows[currentRow] = rows[currentRow] + char
         if (currentRow == 0 || currentRow == numRows - 1) {
             goingDown = !goingDown
         }
@@ -27,7 +26,7 @@ var convert = function(s, numRows) {
             currentRow -= 1
         }
     }
-    let result = strings.join(rows)
+    let result = rows.join("")
     return result
 };
 
@@ -37,11 +36,13 @@ var convert = function(s, numRows) {
 输出："PAHNAPLSIIGYIR"
 
 
+
 示例 3：
 输入：s = "A", numRows = 1
 输出："A"
 
  */
 
-console.log(convert("PAYPALISHIRING"))
-console.log(convert("A"))
+console.log(convert("PAYPALISHIRING",3))
+// PAHN,APLSIIG,YIR
+console.log(convert("A",1))
