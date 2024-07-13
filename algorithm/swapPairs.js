@@ -13,13 +13,25 @@ function ListNode(val, next) {
  * @return {ListNode}
  */
 
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
 var swapPairs = function(head) {
-    let cur = head
-    let pre = ListNode(0, cur)
-    // 1,2,3,4
-    if (cur.next === null) {
+
+    if (head === null || head.next === null) {
         return head;
     }
+    let cur = head
+    let dummy = new ListNode(0, cur)
+    let pre = dummy
     while (pre.next !== null && cur.next !== null) {
         pre.next = cur.next
         cur.next = cur.next.next
@@ -27,6 +39,5 @@ var swapPairs = function(head) {
         pre = cur
         cur = cur.next
     };
-    return head;
-
+    return dummy.next;
 };
