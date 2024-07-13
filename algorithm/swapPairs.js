@@ -15,15 +15,15 @@ function ListNode(val, next) {
 
 var swapPairs = function(head) {
     let cur = head
-    let pre = ListNode(0,cur)
+    let pre = ListNode(0, cur)
     // 1,2,3,4
     if (cur.next === null) {
-       return head;
+        return head;
     }
-    while ( pre.next && cur.next) {
+    while (pre.next !== null && cur.next !== null) {
         pre.next = cur.next
         cur.next = cur.next.next
-        pre.next = cur
+        pre.next.next = cur
         pre = cur
         cur = cur.next
     };
