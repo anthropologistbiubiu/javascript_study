@@ -14,6 +14,15 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
+
+
+// 1,2,3,4
+// 1,2,3,4
 var swapPairs = function(head) {
+    head = head
+
+    while (head !== null) {
+
+    };
 
 };
