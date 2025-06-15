@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 定位示例</title>
+    <style>
+        .static-container, .relative-container, .absolute-container, .fixed-container, .sticky-container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+        /* 静态定位 */
+        .box {
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+            background-color: lightblue;
+        }
+
+        /* 相对定位 */
+        .relative-container .box {
+            position: relative;
+            top: 30px;
+            left: 20px;
+            background-color: lightgreen;
+        }
+
+        /* 绝对定位 */
+        .relative-parent {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            padding: 10px;
+            background-color: red;
+        }
+        .absolute-container .box {
+            /*position: absolute;*/
+            bottom: 0px;
+            right: 0px;
+        }
+
+        /* 固定定位 */
+        .fixed-container .box {
+            position: fixed;
+            top: 50px;
+            left: 10px;
+        }
+
+        /* 粘性定位 */
+        .sticky-container {
+            height: 1000px;
+            padding-top: 100px;
+        }
+        .sticky-container .box {
+            position: sticky;
+            top: 100px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+<div class="static-container">
+    <div class="box">静态定位</div>
+</div>
+
+<div class="relative-container">
+    <div class="box">相对定位</div>
+</div>
+
+<div class="absolute-container">
+    <div class="relative-parent">
+        <div class="box">绝对定位</div>
+    </div>
+</div>
+
+<div class="fixed-container">
+    <div class="box">固定定位</div>
+    <p>滚动查看固定效果</p>
+</div>
+
+<div class="sticky-container">
+    <div class="box">粘性定位</div>
+    <p>滚动查看粘性效果</p>
+</div>
+
+
+</body>
+</html>

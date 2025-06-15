@@ -90,8 +90,11 @@
     </form>
 </body>
 <script>
-
-
+    document.addEventListener('DOMContentLoaded', () => {
+        const listItem = document.createElement('li');
+        listItem.textContent = '这是一个列表项'; // 设置文本内容
+        document.getElementById('fruitList').appendChild(listItem); // 添加到指定 <ul> 列表
+    });
 
 </script>
 </html>

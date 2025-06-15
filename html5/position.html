@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Position Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            position: relative; /* 父容器的参考框 */
+            margin: 50px auto;
+            padding: 10px;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 50px;
+            background-color: lightblue;
+            margin-bottom: 10px;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 50px;
+            background-color: lightgreen;
+            position: relative; /* 设置相对定位 */
+            top: 20px; /* 向下偏移 20px */
+            left: 30px; /* 向右偏移 30px */
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+</div>
+</body>
+</html>

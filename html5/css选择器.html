@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器示例</title>
+    <style>
+        /* 类型选择器 */
+        p {
+            color: blue;
+        }
+
+        /* 类选择器 */
+        .highlight {
+            background-color: yellow;
+        }
+
+        /* ID 选择器 */
+        #unique {
+            font-weight: bold;
+        }
+
+        /* 后代选择器 */
+        div p {
+            font-style: italic;
+            font-size: medium;
+        }
+
+        /* 子选择器 */
+        ul > li {
+            list-style-type: square;
+            font-style: italic;
+        }
+
+        /* 相邻兄弟选择器 */
+        h2 + p {
+            color: red;
+        }
+
+        /* 属性选择器 */
+        a[href^="https"] {
+            text-decoration: underline;
+        }
+
+        /* 伪类选择器 */
+        a:hover {
+            color: green;
+        }
+
+        ul li:first-child{
+          background: pink;
+        }
+
+        /* 伪元素选择器 */
+        h1::after {
+            content: " ★";
+            color: gold;
+        }
+        h1::before{
+            content: "✅";
+        }
+        a::selection{
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+<h1>欢迎</h1>
+<p id="unique" class="highlight">这是一个段落。</p>
+<div>
+    <p>
+        <p>这是一个后代选择器</p>
+    </p>
+</div>
+
+<h2>小标题</h2>
+<p>紧随 h2 的段落。</p>
+
+<ul>
+    <li>项目一</li>
+    <ol>
+        <li>项目二</li>
+    </ol>
+    <li>项目三</li>
+</ul>
+<a href="https://example.com">安全链接</a>
+<a href="http://example.com">非安全链接</a>
+</body>
+</html>

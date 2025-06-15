@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 操作实践 - 待办事项列表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .todo-container {
+            max-width: 400px;
+            margin: auto;
+        }
+        input[type="text"] {
+            width: 70%;
+            padding: 8px;
+        }
+        button {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .delete-btn {
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="todo-container">
+    <h2>待办事项</h2>
+    <div>
+        <input type="text" id="todoInput" placeholder="请输入待办事项">
+        <button id="addBtn">添加</button>
+    </div>
+    <ul id="todoList"></ul>
+</div>
+
+<script>
+    // 获取 DOM 元素
+    const inputElement = document.getElementById('todoInput');
+    const addButton = document.getElementById('addBtn');
+    const todoList = document.getElementById('todoList');
+
+    // 添加事件监听器
+    addButton.addEventListener('click', function() {
+        const inputValue = inputElement.value.trim();
+
+        // 检查输入是否为空
+        if (inputValue === '') {
+            alert('请输入内容！');
+            return;
+        }
+
+        // 创建一个待办事项项
+        const listItem = document.createElement('li');
+        listItem.textContent = inputValue;
+
+        // 创建删除按钮
+        const deleteButton = document.createElement('span');
+        deleteButton.textContent = '删除';
+        deleteButton.classList.add('delete-btn');
+
+        // 将删除按钮添加到待办事项项
+        listItem.appendChild(deleteButton);
+
+        // 将待办事项项添加到列表
+        todoList.appendChild(listItem);
+
+        // 清空输入框
+        inputElement.value = '';
+
+        // 给删除按钮添加点击事件
+        deleteButton.addEventListener('click', function() {
+            todoList.removeChild(listItem); // 从列表中移除该项
+        });
+    });
+</script>
+</body>
+</html>
