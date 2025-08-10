@@ -1,0 +1,115 @@
+# =============================
+# 操作系统和编辑器文件
+# =============================
+.DS_Store
+*.swp
+._*
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# =============================
+# 依赖目录
+# =============================
+node_modules/
+bower_components/
+jspm_packages/
+.pnp/
+.pnp.js
+.yarn/
+.yarnrc.yml
+
+# =============================
+# 测试和调试文件
+# =============================
+coverage/
+.nyc_output/
+*.log
+logs/
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.pid
+*.seed
+*.pid.lock
+
+# =============================
+# 构建输出
+# =============================
+dist/
+build/
+out/
+.next/
+.nuxt/
+.serverless/
+.cache/
+.temp/
+.tmp/
+*.min.js
+*.min.css
+*.map
+*.d.ts
+*.tsbuildinfo
+
+# =============================
+# 环境变量和配置
+# =============================
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.*.local
+.venv
+*.env
+
+# =============================
+# 包管理器相关
+# =============================
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+npm-shrinkwrap.json
+
+# =============================
+# IDE和编辑器特定文件
+# =============================
+.history/
+*.code-workspace
+*.sublime-workspace
+*.sublime-project
+
+# =============================
+# 项目特定文件
+# =============================
+# Vue CLI 生成的文件
+.vuepress/dist
+.vuepress/cache
+
+# TypeScript 编译缓存
+tsconfig.tsbuildinfo
+
+# Storybook
+storybook-static/
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+
+# =============================
+# 其他
+# =============================
+*.bak
+*.tmp
+*.patch
+*.diff
+*.orig
+*.rej
+*.swo
+*~
+~$*
