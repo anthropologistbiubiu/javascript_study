@@ -32,7 +32,9 @@ function failureCallback(err) {
 async function run() {
   try {
     const result = await doSomething();
+    console.log("Received userId:", result);
     const newResult = await doSomethingElse(result);
+    console.log("Received newResult:", newResult);
     const finalResult = await doThirdThing(newResult);
     console.log("Got the final result:", finalResult);
   } catch (err) {
