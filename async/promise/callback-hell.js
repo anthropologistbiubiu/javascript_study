@@ -23,7 +23,6 @@ function failureCallback(err) {
   console.error("❌ 出错了:", err);
 }
 
-/*
 doSomething(function (result) {
   doSomethingElse(
     result,
@@ -39,12 +38,3 @@ doSomething(function (result) {
     failureCallback
   );
 }, failureCallback);
-*/
-
-doSomething()
-  .then((result) => doSomethingElse(result))
-  .then((newResult) => doThirdThing(newResult))
-  .then((finalResult) => {
-    console.log("Got the final result: " + finalResult);
-  })
-  .catch(failureCallback);
