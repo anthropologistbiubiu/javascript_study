@@ -1,21 +1,18 @@
-let a = 0;
-
 new Promise((resolve, reject) => {
   setTimeout(() => {
-    a = 5;
+    var a = 5;
     console.log(a); //5
     resolve(a);
   }, 1000);
 })
   .then((res) => {
     console.log(res); //5
-    res = 10;
     return new Promise((resolve, reject) => {
       resolve(res);
     });
   })
   .then((res) => {
-    console.log(res); //10
+    console.log(res); //
   })
   .catch(() => {});
 
@@ -25,7 +22,6 @@ const test = async () => {
       resolve(1);
     }, 1000);
   });
-
   console.log(res); //1
 };
 
@@ -41,7 +37,7 @@ async function f() {
   console.log(result); // "done!"
 }
 
-await f();
+f();
 
 async function async_func() {
   return 1;
