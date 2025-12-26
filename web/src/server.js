@@ -47,6 +47,17 @@ app.post("/fetch", (req, res) => {
   });
 });
 
+//get url param
+app.get("/id", (req, res) => {
+  res.json({
+    code: 0,
+    msg: "GET success",
+    data: {
+      query: req.query,
+    },
+  });
+});
+
 /**
  * 启动服务
  */
