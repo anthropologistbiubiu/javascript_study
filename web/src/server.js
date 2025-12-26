@@ -6,7 +6,7 @@ import cors from "cors";
 //const cors = require("cors");
 
 const app = express();
-const PORT = 9090;
+const PORT = 9091;
 
 // 允许跨域（前端/axios 调用必备）
 app.use(cors());

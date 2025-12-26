@@ -10,17 +10,33 @@ axios
 
 // axios 的封装
 
-const axiso = axios();
-
+const axiosInstance = axios.create({
+  baseURL: "http://localhost:9091",
+});
 export function axiosRequest(url) {
-  console.log("axiosInstance:", url);
-
-  axios
-    .post(url)
+  axiosInstance
+    .get(url)
     .then((response) => {
-      console.log(response);
+      console.log(response.data);
     })
     .catch((error) => {
       console.log("Error:", error);
     });
+}
+
+export function axiosRequestWithPromise(url) {
+  return new Promise((resolve, reject) => {
+    axiosInstance
+      .get(url)
+      .then((response) => {
+        resolve(response.data);
+      })
+      .catch((error) => {
+        reject(error.message);
+      });
+  });
+}
+
+export function axiosRequestWithReturn(url) {
+  return axiosInstance.get(url);
 }
