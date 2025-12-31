@@ -1,8 +1,17 @@
 /**
  * @return {Generator<number>}
  */
-var fibGenerator = function*() {
-    
+var fibGenerator = function* () {
+  var a = 0;
+  var b = 1;
+  yield a;
+  yield b;
+  while (true) {
+    next = a + b;
+    a = b;
+    b = next;
+    yield next;
+  }
 };
 
 /**
