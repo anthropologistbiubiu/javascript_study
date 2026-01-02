@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>jQuery 本地引入</title>
+  <style>
+    .red { color: red }
+    .box { border: 1px solid #333; padding: 10px; margin: 8px 0 }
+  </style>
 </head>
 <body>
 
@@ -11,10 +15,26 @@
 <!-- ① 先引入 jQuery -->
 <script src="./jquery-3.7.1.js"></script>
 
+<img id="img" src="a.jpg" width="80">
+
+<input type="checkbox" id="ck">
 <!-- ② 再写你自己的 JS -->
 <script>
   $('#box').css('color', 'red')
+  $('#img').attr('src', 'https://via.placeholder.com/80')
+  $('#img').attr('title', '我是图片')
+  const src = $('#img').attr('src')
+// 获取
+console.log('src:',$('#img').attr('src'))
+console.log('src:',$('#img').attr('title'))
+// 移除
+
+$('#img').removeAttr('title')
+console.log('title:',$('#img').attr('title'))  
+
+
 </script>
+
 
 </body>
 </html>
