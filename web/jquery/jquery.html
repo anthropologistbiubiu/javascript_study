@@ -18,6 +18,21 @@
 <img id="img" src="a.jpg" width="80">
 
 <input type="checkbox" id="ck">
+
+<div id="styleBox" class="box">样式盒子</div>
+
+<div id="content">原始内容</div>
+<input id="input">
+
+<ul id="list">
+  <li>第一项</li>
+  <li>第二项</li>
+  <li>第三项</li>
+</ul>
+<button id="addBtn">添加</button>
+<button id="removeBtn">删除</button>
+
+<button id="btn">点我</button>
 <!-- ② 再写你自己的 JS -->
 <script>
   $('#box').css('color', 'red')
@@ -28,13 +43,85 @@
 console.log('src:',$('#img').attr('src'))
 console.log('src:',$('#img').attr('title'))
 // 移除
-
 $('#img').removeAttr('title')
 console.log('title:',$('#img').attr('title'))  
+// 操纵元素状态
+/*
+✅ 记住一句话：
+状态类 → prop
+描述类 → attr
+*/
+$('#ck').prop('checked',true)
+// 操作元素样式
+$('#styleBox').css('backgroundColor','yellow')
+$('#styleBox').css('color','blue')
+$('#styleBox').css({//background: '#eee',
+  fontSize: '18px'
+})
+
+console.log('style:',$('#styleBox').attr('style'))
+// class 操作
+$('#styleBox').addClass('red')
+$('#styleBox').removeClass('red')
+$('#styleBox').toggleClass('red')
+
+/*
+一、一句话结论（先记住）
+不是 class 没生效，
+而是你前面用 .css() 写了「行内样式（inline style）」
+它的优先级比 .red 这个 class 高，
+所以 class 的样式被“压住了”。
+*/
+
+// 操作元素的内容（text / html / val）
+
+//$('#content').text('新的文本内容')
+//$('#styleBox').text('新样式盒子🎁')
+$('#content').html('<span style="color:red;font-size:18px;">HTML 内容</span>')
+
+$('#input').val('输入框内容')
+console.log($('#input').val())
+
+// 创建元素 & 添加元素（🔥重点）
+$('#addBtn').on('click', function () {
+  var i = Math.floor(Math.random() * 100)
+  const $li = $('<li>新元素 ' + i + '</li>')
+  //const $li = $('<li>新元素</li>')
+  $('#list').append($li)
+})
+
+
+// 删除与遍历元素
+$('#removeBtn').on('click', function () {
+  //const $li = $('<li>新元素</li>')
+  //$('#list').remove()
+  $('#list li:last').remove()
+})
+
+// ready 加载事件（非常重要）
+$(function () {
+  console.log('DOM 已加载')
+})
+
+// 绑定事件（on 是核心）
+
+$('#btn').on('click', function () {
+  alert('点击事件')
+})
+
+// 🔥 事件委托
+
+
 
 
 </script>
 
 
+<style>
+.red{
+    color: red;
+    background: #eee;
+}
+</style>
 </body>
 </html>
