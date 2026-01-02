@@ -33,6 +33,9 @@
 <button id="removeBtn">删除</button>
 
 <button id="btn">点我</button>
+
+<ul id="todo"></ul>
+<button id="addTodoBtn">添加待办</button>
 <!-- ② 再写你自己的 JS -->
 <script>
   $('#box').css('color', 'red')
@@ -110,6 +113,28 @@ $('#btn').on('click', function () {
 })
 
 // 🔥 事件委托
+/*
+$('#addTodoBtn').on('click mouseout',function(){
+   const $li = $('<li>' + '新任务' + '</li>');
+   $('#todo').append($li);
+})
+*/
+
+$('#addTodoBtn').on({'click':function(){
+   const $li = $('<li>' + '新任务' + '</li>')
+   $('#todo').append($li)},
+   'mouseout':function(){
+     console.log('鼠标移出按钮')
+   },
+})
+
+$('#todo').on('click','li',function(){
+   $(this).toggleClass('red');
+})
+
+
+
+
 
 
 
