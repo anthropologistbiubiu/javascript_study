@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <style>
+  </style>
+</head>
+
+
+<body>
+
+<div id="box">Hello Ajax</div>
+
+<!-- ① 先引入 jQuery -->
+<script src="./jquery-3.7.1.js"></script>
+
+<ul id="list"></ul>
+
+<button id="loadBtn">加载数据</button>
+<button id="removeBtn">删除</button>
+
+<!-- ② 再写你自己的 JS -->
+<script>
+
+$('#loadBtn').on('click', function () {
+    $.ajax(
+        {
+            url:'http://localhost:9092/ajax',
+            method:'POST',
+            //data:{name:'zs', age:20},
+            dataType:'json',
+            success:function(res){
+                res.data.forEach(
+                item => {
+                    console.log(item);
+                    $('#list').append('<li>' + item.name + '</li>');
+                }
+                )
+            },
+            error:function(err) {
+                console.log('请求失败了', err); 
+            }
+        }
+    )
+})
+
+$('#removeBtn').on('click', function () {
+  $('#list li:last').remove()
+})
+
+</script>
+</body>
+</html>

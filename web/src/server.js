@@ -58,6 +58,15 @@ app.get("/id", (req, res) => {
   });
 });
 
+// ajax post
+app.post("/ajax", (req, res) => {
+  res.json({
+    code: 0,
+    msg: "POST success",
+    data: [{ name: "张三" }, { name: "李四" }, { name: "王五" }],
+  });
+});
+
 /**
  * 启动服务
  */
