@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>DOM 操作练习</title>
+
+  <style>
+    .box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .active {
+      background: #ffe58f;
+    }
+    .done {
+      text-decoration: line-through;
+      color: #999;
+    }
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 id="title">DOM 操作练习页</h1>
+
+  <!-- 基础文本 / 属性 -->
+  <div class="box" id="infoBox">
+    <p class="desc">这是一段描述文本</p>
+    <img id="avatar" src="a.png" alt="头像" width="80">
+  </div>
+
+  <!-- 表单区域 -->
+  <div class="box" id="formBox">
+    <input type="text" id="username" placeholder="请输入用户名">
+    <input type="checkbox" id="agree">
+    <select id="role">
+      <option value="user">普通用户</option>
+      <option value="admin">管理员</option>
+    </select>
+    <button id="submitBtn">提交</button>
+  </div>
+
+  <!-- 列表（重点） -->
+  <div class="box">
+    <ul id="todoList">
+      <li data-id="1">学习 jQuery</li>
+      <li data-id="2">练习 DOM 操作</li>
+      <li data-id="3">理解事件委托</li>
+    </ul>
+    <button id="addTodoBtn">添加待办</button>
+    <button id="clearTodoBtn">清空待办</button>
+  </div>
+
+  <!-- 嵌套结构（遍历用） -->
+  <div class="box" id="nestedBox">
+    <ul>
+      <li>
+        一级
+        <ul>
+          <li class="inner">二级 A</li>
+          <li class="inner">二级 B</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- jQuery -->
+  <script src="./jquery-3.7.1.js"></script>
+
+  <script>
+    // 编写jQuery 代码，完成 DOM 操作练习
+
+    // id 选择器示例
+    const infoBox = $('#infoBox');
+    console.log(infoBox);
+    // class 选择器示例
+    const desc = $('.box');
+    console.log(desc);
+    // 标签选择器示例
+    console.log('button',$('button'));
+    // 组合选择器示例
+    console.log('button li',$('button,li'));
+    console.log('input #role',$('input,#role'));
+    // 层级选择器
+    // 后代选择器
+    console.log('后代选择器',$('#infoBox #avatar'));
+    // 子元素选择器
+    console.log('子代选择器',$('#todoList > li'));
+    // 兄弟选择器
+    console.log('相邻兄弟选择器',$('p + img'));
+    // 所有兄弟选择器 
+    console.log('所有兄弟选择器',$('#title ~ .box'));
+    // 表单选择器
+    console.log('表单选择器',$(':input'));
+    console.log(':text',$(':text'));
+    console.log(':password',$(':password'));
+    console.log(':checked',$(':checked'));
+    console.log(':selected',$(':selected'));
+    // 过滤选择器
+
+
+
+
+
+
+
+
+  </script>
+
+</body>
+</html>
