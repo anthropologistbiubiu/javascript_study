@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>jQuery 事件绑定 vs 事件委托（单文件示例）</title>
+
+  <!-- jQuery CDN -->
+  <script src="./jquery-3.7.1.js"></script>
+
+  <style>
+    body { font-family: Arial, sans-serif; }
+    ul { padding: 0; }
+    li {
+      list-style: none;
+      padding: 8px;
+      margin: 4px 0;
+      background: #f0f0f0;
+      cursor: pointer;
+    }
+    .box {
+      border: 1px solid #ccc;
+      padding: 12px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>jQuery 事件绑定 vs 事件委托</h2>
+
+<div id="direct-box" class="box">
+  <h3>❌ 事件绑定（Direct Binding）</h3>
+  <button id="add-direct">新增 item</button>
+  <ul id="direct-list">
+    <li class="item">Direct A</li>
+    <li class="item">Direct B</li>
+  </ul>
+</div>
+
+<div class="box">
+  <h3>✅ 事件委托（Event Delegation）</h3>
+  <button id="add-delegate">新增 item</button>
+  <ul id="delegate-list">
+    <li class="item">Delegate A</li>
+    <li class="item">Delegate B</li>
+  </ul>
+</div>
+
+<script>
+  $(function () {
+
+    /* =========================
+     * ❌ 事件绑定（直接绑定）
+     * ========================= */
+
+
+    //function bindDirectEvent() {
+      $("#direct-box ul").on("click", function () {
+        alert("Direct click: " + $(this).text());
+      });
+    //}
+
+    // 动态新增元素
+    $("#add-direct").on("click", function () {
+      $("#direct-list").append(
+        `<li class="item">Direct ${Date.now()}</li>`
+      );
+      // ⚠️ 新元素没有事件（除非再次调用 bindDirectEvent）
+    });
+
+
+    /* =========================
+     * ✅ 事件委托（推荐）
+     * ========================= */
+
+    $("#delegate-list").on("click", ".item", function () {
+      alert("Delegate click: " + $(this).text());
+    });
+
+    // 动态新增元素
+    $("#add-delegate").on("click", function () {
+      $("#delegate-list").append(
+        `<li class="item">Delegate ${Date.now()}</li>`
+      );
+      // ✅ 自动生效，无需重新绑定
+    });
+
+  });
+</script>
+
+</body>
+</html>
