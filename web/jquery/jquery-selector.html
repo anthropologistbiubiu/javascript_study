@@ -68,6 +68,24 @@
       </li>
     </ul>
   </div>
+  
+
+  <div class="box">
+    <form id="myForm">
+        <input type="radio" name="gender" value="male">male</input>
+        <input type="radio" name="gender" value="female">female</input>
+        <input type="checkbox" name="human">是否人类</input>
+        <input type="image" name="图片"></input>
+
+        <input type="submit"></input>
+        <input type="reset"></input>
+
+    </form>
+  </div>
+
+  <div>
+
+  </div>
 
   <!-- jQuery -->
   <script src="./jquery-3.7.1.js"></script>
@@ -99,14 +117,32 @@
     console.log('表单选择器',$(':input'));
     console.log(':text',$(':text'));
     console.log(':password',$(':password'));
-    console.log(':checked',$(':checked'));
+    console.log(':radio',$(':radio'));
     console.log(':selected',$(':selected'));
+    console.log(':checkbox',$(':selected'));
+    console.log(':reset',$('#myForm > :reset'));
     // 过滤选择器
     console.log(':last',$('#todoList li:last'));
     console.log(':first',$('li:first'));
     console.log(':second',$('li:eq(5)'));
     console.log(':odd',$('li:odd'));
     console.log(':even',$('li:even'));
+
+    // 
+    //$(":submit").on('click',function(){
+     // console.log("你点击了提交按钮");
+    //})
+    $("#myForm").on("submit", function (e) {
+     e.preventDefault(); // 阻止默认提交（非常关键）
+
+      console.log("表单提交了");
+      // 方法 1：直接看序列化结果
+      console.log($(this).serialize());
+    });
+    $("#myForm").on("reset", function (e) {});
+
+    console.log("button",$("button"));
+
 
 
 
