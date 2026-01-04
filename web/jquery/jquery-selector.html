@@ -43,7 +43,7 @@
   <!-- 表单区域 -->
   <div class="box" id="formBox">
     <input type="text" id="username" placeholder="请输入用户名">
-    <input type="checkbox" id="agree">
+    <input type="checkbox" checked>
     <select id="role">
       <option value="user">普通用户</option>
       <option value="admin">管理员</option>
@@ -148,6 +148,11 @@
 
     console.log("button",$("button"));
 
+
+    // attr vs prop
+    console.log('attr',$('#formBox :checkbox').attr('checked'));
+    console.log('prop',$('#formBox :checkbox').prop('checked',false));
+    console.log('prop',$('#formBox :checkbox').prop('disabled'));
 
 
 
